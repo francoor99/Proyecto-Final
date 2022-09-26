@@ -22,4 +22,3 @@ class Character:
 
 ''' vikingo = Character('Wosh', 19, 21, 23, 25, 'Human')
 print(vikingo) '''
-print ('hola')
