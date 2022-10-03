@@ -84,8 +84,8 @@ def create_enemy():
     object = id_enemy
     object = Enemy(name, age, strength, agi, hp, type)
     dictionary_enemy[id_object] = object
+    print(constant_created_character)
     print(object)
-    print(dictionary_enemy)
 
 
 def select_character():
@@ -93,7 +93,7 @@ def select_character():
     values = dictionary_characters.values()
     nro = 1
     for i in values:
-        print(nro, ' - ', i.get_name)
+        print(nro, ' - ', i.get_name())
         nro += 1
     print(dictionary_characters)
 
