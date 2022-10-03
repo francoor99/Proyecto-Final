@@ -67,7 +67,7 @@ def combat(character):
             print('Ambos estan vivos')
             damage = reception(attack(character_attack), enemy_agility)
             print('El ataque causa ', damage, ' puntos de daño.')
-            enemy_life = enemy_life + damage
+            enemy_life = enemy_life - damage
             if enemy_life > 0:
                 print('El enemigo quedó con ', enemy_life, ' puntos de vida')
                 print('<------------------------------------------------>')
