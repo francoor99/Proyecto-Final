@@ -93,9 +93,9 @@ def select_character():
     values = dictionary_characters.values()
     nro = 1
     for i in values:
-        print(nro, ' - ', i.get_name)
+        print(nro, ' - ', i.get_name())
         nro += 1
-    print(dictionary_characters)
+    """print(dictionary_characters)"""
 
 
 def delete_character():

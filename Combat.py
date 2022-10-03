@@ -8,7 +8,7 @@ def attack(attack_points):
     dice1 = randint(1, 6)  # Dado 1
     dice2 = randint(1, 6)  # Dado 2
     lucky = dice1 + dice2
-    print(lucky)
+    print('Suma de los dados',lucky)
     if lucky < 4:
         print('Ataque nulo')
         attack = 0
@@ -31,7 +31,7 @@ def attack(attack_points):
 
 
 def reception(attack, agility):
-    print(attack, agility)
+    print('Ataque',attack, 'Agilidad',agility)
     if agility == 1:
         return attack
     elif agility == 2:
