@@ -12,10 +12,10 @@ def attack(attack_points):
     if lucky < 4:
         print('Ataque nulo')
         attack = 0
-    elif lucky > 3 or lucky < 7:
+    elif lucky > 3 and lucky < 7:
         print('Ataque x1')
         attack = attack_points
-    elif lucky > 6 or lucky < 9:
+    elif lucky > 6 and lucky < 9:
         print('Ataque x2')
         attack = attack_points * 2
     elif lucky == 9 or lucky == 10:
