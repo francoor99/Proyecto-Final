@@ -1,6 +1,6 @@
 # Proyecto-Final
 Integrantes: Beltrán, Illesca, Roldán
-Recordar los pasos:
+Recordar los pasos: (git init antes de todo)
 1° git pull origin master
 (para actualizar el area de trabajo local)
 2° editamos lo que queremos

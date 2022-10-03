@@ -18,7 +18,7 @@ def attack(attack_points):
     elif lucky > 6 or lucky < 9:
         print('Ataque x2')
         attack = attack_points * 2
-    elif lucky == 9 or 10:
+    elif lucky == 9 or lucky == 10:
         print('Ataque x3')
         attack = attack_points * 3
     elif lucky == 11:
@@ -36,11 +36,11 @@ def reception(attack, agility):
         return attack
     elif agility == 2:
         return attack - 2
-    elif agility == 3 or 4:
+    elif agility == 3 or agility == 4:
         return attack - 3
-    elif agility == 5 or 6:
+    elif agility == 5 or agility == 6:
         return attack - 4
-    elif agility == 7 or 8:
+    elif agility == 7 or agility == 8:
         return attack - 5
     else:
         return attack - 7
