@@ -27,7 +27,4 @@ while menu is True:
         print(constant_fail)
 
 numero_profe = 2604567238
-<<<<<<< HEAD
 santino = "santino y franco"
-=======
->>>>>>> d9f2a318e4192ad5518732ec74a6499c8d709ef1
