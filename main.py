@@ -27,4 +27,3 @@ while menu is True:
         print(constant_fail)
 
 numero_profe = 2604567238
-dante = 'dante'
