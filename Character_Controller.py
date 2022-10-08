@@ -87,6 +87,23 @@ def create_character():
     print(object)'''
 
 
+"""def select_character():
+    chosen_character = None
+    while chosen_character.get_hp() == 0 or None:
+        print(constant_select_character)
+        values = dictionary_characters.values()
+        nro = 1
+        for i in values:
+            print(nro, ' - ', i.get_name())
+            nro += 1
+        character_option = int(input(constant_character_option))
+        chosen_character = dictionary_characters[character_option]
+        if chosen_character.get_hp() == 0:
+            print("El personaje elegido esta muerto, elija otro ")
+        return chosen_character"""
+
+
+
 def select_character():
     print(constant_select_character)
     values = dictionary_characters.values()
@@ -94,9 +111,24 @@ def select_character():
     for i in values:
         print(nro, ' - ', i.get_name())
         nro += 1
+    character_option = int(input(constant_character_option))
+    chosen_character = dictionary_characters[character_option]
+    while character_option is not 1 or 2 or 3:
+        print("Eligio una opcion no valida, ingrese un personaje:")
+        character_option = int(input(constant_character_option))
+        chosen_character = dictionary_characters[character_option]
+    return chosen_character
+
+
+
 
 
 
 def delete_character():
     print(constant_delete_character)
+
+
+
+
+
 

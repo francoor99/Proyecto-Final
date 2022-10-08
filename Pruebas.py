@@ -91,6 +91,8 @@ fila.push(2023)
 print(fila.peek())
 print(fila.size())
 fila.pop()'''
-
-for i in range(0, 10):
-    print(i+1)
+prueba = False
+if prueba == True:
+    print("xd")
+else:
+    "Buen dia"

@@ -15,6 +15,7 @@ dictionary_enemy[10] = Enemy("Thanos", 10, 6000, 16, 14, 17)
 dictionary_characters[1] = Character("Santino", 15, 5, 5, 5, "dwarf")
 dictionary_characters[2] = Character("Franco", 20, 5, 5, 5, "human")
 dictionary_characters[3] = Character("Dante", 18, 5, 5, 5, "elf")
+dead_characters = 0
 menu = True
 while menu is True:
     constant_menu()
@@ -23,10 +24,7 @@ while menu is True:
         create_character()
     elif option == 2:
         if len(dictionary_characters) == 3:
-            select_character()
-            character_option = int(input(constant_character_option))
-            print(dictionary_characters[character_option])
-            combat(dictionary_characters[character_option])
+            combat()
         else:
             print(constant_min_characters)
     elif option == 3:
