@@ -113,7 +113,7 @@ def select_character():
         nro += 1
     character_option = int(input(constant_character_option))
     chosen_character = dictionary_characters[character_option]
-    while character_option is not 1 or 2 or 3:
+    while 0 << character_option << 4:
         print("Eligio una opcion no valida, ingrese un personaje:")
         character_option = int(input(constant_character_option))
         chosen_character = dictionary_characters[character_option]

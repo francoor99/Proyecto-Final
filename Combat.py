@@ -61,16 +61,17 @@ def reception(attack, agility):
 
 def combat():
     dead_character = 0
-    for i in range(10):
-        character = select_character()
+    enemy_counter = 1
+    while enemy_counter <11:
         if dead_character == 3:
             print("Murieron los 3 heroes. Perdiste.")
+            sleep(3)
             break
+        character = select_character()
         while character.get_hp() == 0:
             print("El personaje elegido esta muerto, elija otro ")
             character = select_character()
-        dead_character = dead_character + 1
-        enemy = dictionary_enemy[i+1]
+        enemy = dictionary_enemy[enemy_counter]
         print('Su personaje es: ', character.get_name())
         print('Va a pelear contra: ', enemy.get_name())
         character_attack = character.get_strength()
@@ -105,11 +106,13 @@ def combat():
                     sleep(3)
                     combating = False
                     sleep(3)
+                    enemy_counter = enemy_counter + 1
             else:
                 print('Has muerto, el enemigo ganó el combate. :(')
                 character._Character__hp = 0
                 print(character.get_hp()) #Para ver si anda el hp
                 sleep(3)
+                dead_character = dead_character + 1
                 combating = False
                 character_death = True
 
