@@ -37,13 +37,26 @@ def reception(attack, agility):
     elif agility == 2:
         return attack - 2
     elif agility == 3 or agility == 4:
-        return attack - 3
+        if attack <= 3:
+            return 0
+        else:
+            return attack - 3
     elif agility == 5 or agility == 6:
-        return attack - 4
+        if attack <= 4:
+            return 0
+        else:
+            return attack - 4
+
     elif agility == 7 or agility == 8:
-        return attack - 5
+        if attack <= 5:
+            return 0
+        else:
+            return attack - 5
     else:
-        return attack - 7
+        if attack <= 7:
+            return 0
+        else:
+            return attack - 7
 
 
 def combat(character):
@@ -77,7 +90,7 @@ def combat(character):
                     print('El enemigo ataca!!')
                     damage = reception(attack(enemy_attack), character_agility)
                     print('El ataque causa ', damage, ' puntos de daño.')
-                    character_life = character_life + damage
+                    character_life = character_life - damage
                     print('<------------------------------------------------>')
                 else:
                     print('El enemigo ha muerto, has ganado este combate.')
