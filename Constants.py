@@ -1,11 +1,9 @@
 def constant_menu():
     print('-------------------------')
     print('- 1. Crear Personaje    -')
-    print('- 2. Crear Enemigo      -')
-    print('- 3. Elegir Personaje   -')
-    print('- 4. Combatir           -')
-    print('- 5. Eliminar Personaje -')
-    print('- 6. Salir              -')
+    print('- 2. Combatir           -')
+    print('- 3. Eliminar Personaje -')
+    print('- 4. Salir              -')
     print('-------------------------')
 
 

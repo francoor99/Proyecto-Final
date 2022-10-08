@@ -1,6 +1,16 @@
 from Combat import *
 from Constants import *
 
+dictionary_enemy[1] = Enemy("Dark Lord", 1, 150, 4, 5, 4)
+dictionary_enemy[2] = Enemy("Anakin Skywalker", 2, 25, 6, 4, 5)
+dictionary_enemy[3] = Enemy("Max Steel", 3, 21, 8, 3, 6)
+dictionary_enemy[4] = Enemy("Ken", 4, 20, 8, 7, 5)
+dictionary_enemy[5] = Enemy("Lotso", 5, 5, 9, 4, 10)
+dictionary_enemy[6] = Enemy("Darth Vader", 6, 85, 12, 5, 11)
+dictionary_enemy[7] = Enemy("Voldemort", 7, 80, 13, 8, 9)
+dictionary_enemy[8] = Enemy("El Joker", 8, 35, 10, 15, 10)
+dictionary_enemy[9] = Enemy("Davy Jones", 9, 150, 12, 13, 15)
+dictionary_enemy[10] = Enemy("Thanos", 10, 6000, 16, 14, 17)
 
 menu = True
 while menu is True:
@@ -9,22 +19,17 @@ while menu is True:
     if option == 1:
         create_character()
     elif option == 2:
-        create_enemy()
-    elif option == 3:
-        select_character()
-        character_option = int(input(constant_character_option))
-        print(dictionary_characters[character_option])
-    elif option == 4:
         select_character()
         character_option = int(input(constant_character_option))
         print(dictionary_characters[character_option])
         combat(dictionary_characters[character_option])
-    elif option == 5:
+    elif option == 3:
         delete_character()
-    elif option == 6:
+    elif option == 4:
         menu = False
     else:
         print(constant_fail)
 
 numero_profe = 2604567238
-santino = "santino y franco"
+
+

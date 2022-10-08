@@ -44,10 +44,9 @@ def create_character():
     object = Character(name, age, strength, agi, hp, type)
     dictionary_characters[id_object] = object
     print(object)
-    print(dictionary_characters)
 
 
-def create_enemy():
+'''def create_enemy():
     print(constant_enemy)
     global id_enemy
     id_enemy += 1
@@ -82,10 +81,10 @@ def create_enemy():
         else:
             print(constant_fail)
     object = id_enemy
-    object = Enemy(name, age, strength, agi, hp, type)
+    object = Enemy(name, age, strength, agi, hp)
     dictionary_enemy[id_object] = object
     print(constant_created_character)
-    print(object)
+    print(object)'''
 
 
 def select_character():
@@ -95,7 +94,7 @@ def select_character():
     for i in values:
         print(nro, ' - ', i.get_name())
         nro += 1
-    """print(dictionary_characters)"""
+
 
 
 def delete_character():
