@@ -27,3 +27,4 @@ constant_enemy = '---Menú de creación de Enemigo---'
 constant_name = 'Ingrese el nombre del personaje: '
 constant_age = 'Ingrese en números la edad del personaje: '
 constant_created_character = 'Personaje creado:'
+constant_min_characters = "Debe tener 3 personajes creados."

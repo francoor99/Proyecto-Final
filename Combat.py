@@ -48,20 +48,21 @@ def reception(attack, agility):
 
 def combat(character):
     for i in range(10):
-        enemy = dictionary_enemy[i]  # 'FALTA QUE ELIJA UNO ALEATORIO
+        enemy = dictionary_enemy[i+1]  # 'FALTA QUE ELIJA UNO ALEATORIO
         print('Su personaje es: ', character.get_name())
         print('Va a pelear contra: ', enemy.get_name())
-        character_attack = character._Character__strength
-        enemy_attack = enemy._Enemy__strength
+        character_attack = character.get_strength()
+        enemy_attack = enemy.get_strength()
         print('La fuerza de tu personaje es: ', character_attack)
-        character_life = character._Character__hp
-        enemy_life = enemy._Enemy__hp
+        character_life = character.get_hp()
+        enemy_life = enemy.get_hp()
         print('La vida de tu personaje es: ', character_life)
-        character_agility = character._Character__agi
-        enemy_agility = enemy._Enemy__agi
+        character_agility = character.get_agi()
+        enemy_agility = enemy.get_agi()
         print('La agilidad de tu personaje es: ', character_agility)
         sleep(5)
         combating = True
+        character_death = False
         while combating == True:
             if character_life > 0:
                 print('<------------------------------------------------>')
@@ -82,7 +83,13 @@ def combat(character):
                     print('El enemigo ha muerto, has ganado este combate.')
                     sleep(3)
                     combating = False
+                    sleep(3)
             else:
                 print('Has muerto, el enemigo ganó el combate. :(')
+                character._Character__hp = 0
+                print(character.get_hp())
                 sleep(3)
                 combating = False
+                character_death = True
+        if character_death == True:
+            break
