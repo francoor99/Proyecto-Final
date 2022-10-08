@@ -35,6 +35,18 @@ class Character:
     def get_type(self):
         return self.__type
 
+    def set_level(self, new_level):
+        self.__level = new_level
+
+    def set_strength(self, new_strength):
+        self.__strength = new_strength
+
+    def set_agi(self, new_agi):
+        self.__agi = new_agi
+
+    def set_hp(self, new_hp):
+        self.__hp = new_hp
+
 
     def __str__(self): ## Es para cuando llamo con un print al objeto
         return f'Nombre: {self.__name}\nEdad: {self.__age}\nFuerza: {self.__strength}\nAgilidad: {self.__agi}\nSalud: {self.__hp}\nRaza: {self.__type}'

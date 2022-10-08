@@ -1,5 +1,4 @@
 from Character_Controller import *
-from random import randint
 from time import sleep
 
 
@@ -107,6 +106,8 @@ def combat():
                     combating = False
                     sleep(3)
                     enemy_counter = enemy_counter + 1
+                    upgrade_level()
+                    add_item(character)
             else:
                 print('Has muerto, el enemigo ganó el combate. :(')
                 character._Character__hp = 0

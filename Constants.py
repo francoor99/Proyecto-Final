@@ -14,7 +14,12 @@ def constant_raza():
     print('- 3. Enano                     -')
     print('--------------------------------')
 
-
+def constant_level():
+    print('---Ingrese que atributo mejorar: ---')
+    print('- 1. Fuerza                        -')
+    print('- 2. Agilidad                      -')
+    print('- 3. Vida                          -')
+    print('------------------------------------')
 def fail():
     print('Ingresó un dato incorrecto, vuelva a intentar...')
 
