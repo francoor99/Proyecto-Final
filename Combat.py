@@ -15,17 +15,17 @@ def attack(attack_points):
         print('Ataque x1')
         attack = attack_points
     elif lucky > 6 and lucky < 9:
+        print('Ataque x1.5')
+        attack = attack_points * 1.5
+    elif lucky == 9 and lucky == 10:
         print('Ataque x2')
         attack = attack_points * 2
-    elif lucky == 9 and lucky == 10:
+    elif lucky == 11:
+        print('Ataque x2.5')
+        attack = attack_points * 2.5
+    elif lucky == 12:
         print('Ataque x3')
         attack = attack_points * 3
-    elif lucky == 11:
-        print('Ataque x4')
-        attack = attack_points * 4
-    elif lucky == 12:
-        print('Ataque x5')
-        attack = attack_points * 5
     return attack
 
 
@@ -63,7 +63,7 @@ def combat():
     enemy_counter = 1
     while enemy_counter <11:
         if dead_character == 3:
-            print("Murieron los 3 heroes. Perdiste.")
+            print(GAME_OVER_TEXT)
             sleep(3)
             break
         character = select_character()
@@ -101,7 +101,7 @@ def combat():
                     character_life = character_life - damage
                     print('<------------------------------------------------>')
                 else:
-                    print('El enemigo ha muerto, has ganado este combate.')
+                    print(COMBAT_WIN_TEXT)
                     sleep(3)
                     combating = False
                     sleep(3)
@@ -109,11 +109,11 @@ def combat():
                     upgrade_level()
                     add_item(character)
             else:
-                print('Has muerto, el enemigo ganó el combate. :(')
+                print(COMBAT_LOSE_TEXT)
                 character._Character__hp = 0
                 print(character.get_hp()) #Para ver si anda el hp
                 sleep(3)
                 dead_character = dead_character + 1
                 combating = False
-                character_death = True
+        print()
 

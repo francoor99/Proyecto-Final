@@ -1,35 +1,28 @@
-def constant_menu():
-    print('-------------------------')
-    print('- 1. Crear Personaje    -')
-    print('- 2. Combatir           -')
-    print('- 3. Eliminar Personaje -')
-    print('- 4. Salir              -')
-    print('-------------------------')
+MENU_TEXT = """-------------------------
+- 1. Crear Personaje    -
+- 2. Combatir           -
+- 3. Eliminar Personaje -
+- 4. Salir              -
+-------------------------"""
 
+RAZA_TEXT = """---Ingrese Raza del personaje---
+- 1. Humano                    -
+- 2. Elfo                      -
+- 3. Enano                     -
+--------------------------------"""
 
-def constant_raza():
-    print('---Ingrese Raza del personaje---')
-    print('- 1. Humano                    -')
-    print('- 2. Elfo                      -')
-    print('- 3. Enano                     -')
-    print('--------------------------------')
-
-def constant_level():
-    print('---Ingrese que atributo mejorar: ---')
-    print('- 1. Fuerza                        -')
-    print('- 2. Agilidad                      -')
-    print('- 3. Vida                          -')
-    print('------------------------------------')
-def fail():
-    print('Ingresó un dato incorrecto, vuelva a intentar...')
-
-constant_fail = 'Ingresó un dato incorrecto, vuelva a intentar...'
-constant_select_option = 'Seleccione una opción: '
-constant_character_option = 'Ingrese el número del personaje que desea elegir: '
-constant_select_character = 'Seleccione un Personaje'
-constant_delete_character = '¿Qué personaje desea eliminar?'
-constant_enemy = '---Menú de creación de Enemigo---'
-constant_name = 'Ingrese el nombre del personaje: '
-constant_age = 'Ingrese en números la edad del personaje: '
-constant_created_character = 'Personaje creado:'
-constant_min_characters = "Debe tener 3 personajes creados."
+FAIL_TEXT = 'Ingresó un dato incorrecto, vuelva a intentar...'
+SELECT_OPTION_TEXT = 'Seleccione una opción: '
+CHARACTER_OPTION_TEXT = 'Ingrese el número del personaje que desea elegir: '
+SELECT_CHARACTER_TEXT = 'Seleccione un Personaje'
+DELETE_CHARACTER_TEXT = '¿Qué personaje desea eliminar?'
+ENEMY_CREATION_TEXT = '---Menú de creación de Enemigo---'
+NAME_INPUT_TEXT = 'Ingrese el nombre del personaje: '
+AGE_INPUT_TEXT = 'Ingrese en números la edad del personaje: '
+CREATED_CHARACTER_TEXT = 'Personaje creado:'
+MIN_CHARACTER_WARNING = "Debe tener 3 personajes creados."
+COMBAT_WIN_TEXT = 'El enemigo ha muerto, has ganado este combate.'
+COMBAT_LOSE_TEXT = 'Has muerto, el enemigo ganó el combate. :('
+MAX_STATS_TEXT = 'La suma entre los tres atributos (Fuerza - Agilidad - Vida tienen que sumar 15)'
+GAME_OVER_TEXT = "Murieron los 3 heroes. Perdiste."
+WIN_GAME_TEXT = "¡¡Ganaste!!"

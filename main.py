@@ -2,7 +2,7 @@ from Combat import *
 from Constants import *
 
 
-dictionary_enemy[1] = Enemy("Dark Lord", 1, 150, 4, 5, 4)
+dictionary_enemy[1] = Enemy("Dark Lord",1 , 150, 4, 5, 4)
 dictionary_enemy[2] = Enemy("Anakin Skywalker", 2, 25, 6, 4, 5)
 dictionary_enemy[3] = Enemy("Max Steel", 3, 21, 8, 3, 6)
 dictionary_enemy[4] = Enemy("Señor Burns", 4, 20, 8, 7, 5)
@@ -19,22 +19,21 @@ dictionary_characters[3] = Character("Dante", 18, 5, 5, 5, "elf")
 dead_characters = 0
 menu = True
 while menu is True:
-    constant_menu()
-    option = int(input(constant_select_option))
+    print(MENU_TEXT)
+    option = int(input(SELECT_OPTION_TEXT))
     if option == 1:
         create_character()
     elif option == 2:
         if len(dictionary_characters) == 3:
             combat()
         else:
-            print(constant_min_characters)
+            print(MIN_CHARACTER_WARNING)
     elif option == 3:
         delete_character()
     elif option == 4:
         menu = False
     else:
-        print(constant_fail)
+        print(FAIL_TEXT)
 
-numero_profe = 2604567238
 
 

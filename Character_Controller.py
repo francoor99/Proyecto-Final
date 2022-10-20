@@ -14,21 +14,22 @@ id_enemy = 0
 def create_character():
     global id_object
     id_object += 1
-    name = str(input(constant_name))
-    age = int(input(constant_age))
+    name = str(input(NAME_INPUT_TEXT))
+    age = int(input(AGE_INPUT_TEXT))
     validation = False
     while validation is False:
-        print('La suma entre los tres atributos (Fuerza - Agilidad - Vida tienen que sumar 15)')
+        print(MAX_STATS_TEXT)
         strength = int(input('Ingrese la furza del personaje (mínimo 1): '))
         agi = int(input('Ingrese la agilidad del personaje (mínimo 1): '))
         hp = int(input('Ingrese la vida: '))
         if strength + agi + hp == 15 and strength >= 1 and agi >= 1 and hp >= 1:
             validation = True
         else:
-            print(constant_fail)
+            print(FAIL_TEXT)
     validation = False
     while validation == False:
-        constant_raza()
+        """constant_raza()"""
+        print(RAZA_TEXT)
         option = int(input('Ingrese el número: '))
         if option == 1:
             type = 'human'
@@ -43,7 +44,7 @@ def create_character():
             hp += 2
             validation = True
         else:
-            print(constant_fail)
+            print(FAIL_TEXT)
     object = id_object
     object = Character(name, age, strength, agi, hp, type)
     dictionary_characters[id_object] = object
@@ -51,20 +52,20 @@ def create_character():
 
 
 def select_character():
-    print(constant_select_character)
+    print(SELECT_CHARACTER_TEXT)
     values = dictionary_characters.values()
     nro = 1
     for i in values:
         print(nro, ' - ', i.get_name())
         nro += 1
-    character_option = int(input(constant_character_option))
+    character_option = int(input(CHARACTER_OPTION_TEXT))
     if character_option == 120731:
         print("Yo soy Iron Man")
         return Character("Iron Man", 53, 100, 100, 100, "Mejor superheroe de la historia")
     chosen_character = dictionary_characters[character_option]
     while 0 << character_option << 4 :
         print("Eligio una opcion no valida, ingrese un personaje:")
-        character_option = int(input(constant_character_option))
+        character_option = int(input(CHARACTER_OPTION_TEXT))
         chosen_character = dictionary_characters[character_option]
     return chosen_character
 
@@ -106,7 +107,7 @@ def add_item(character):
 
 
 def delete_character():
-    print(constant_delete_character)
+    print(DELETE_CHARACTER_TEXT)
 
 
 

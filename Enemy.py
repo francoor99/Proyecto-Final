@@ -33,3 +33,4 @@ class Enemy:
 
     def __str__(self): ## Es para cuando llamo con un print al objeto
         return f'Nombre: {self.__name}\nNivel: {self.level}\nEdad: {self.__age}\nFuerza: {self.__strength}\nAgilidad: {self.__agi}\nSalud: {self.__hp}'
+
