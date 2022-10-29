@@ -98,6 +98,7 @@ def add_item(character):
     if 0 <= i <= 10:
         item = items_list[i]
         print(f'{ENEMY_DROP_TEXT} {item.get_name()}')
+        time.sleep(2)
         strength = character.get_strength() + item.get_strength()
         character.set_strength(strength)
         print(f' {CHARACTER_TEXT} {character.get_name()} {RAISED_TEXT} {item.get_strength()} {FORCE_TEXT}')

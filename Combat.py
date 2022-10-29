@@ -62,6 +62,7 @@ def combat():
     dead_character = 0
     enemy_counter = 1
     while enemy_counter <11:
+        sleep(2)
         if dead_character == 3:
             print(GAME_OVER_TEXT)
             sleep(3)
@@ -87,11 +88,11 @@ def combat():
         combating = True
         while combating == True:
             if character_life > 0:
-                print(SEPARATOR)
                 print(LIVING_TEXT)
                 damage = reception(attack(character_attack), enemy_agility)
                 print(DAMAGE_TEXT_1, damage, DAMAGE_TEXT_2)
                 enemy_life = enemy_life - damage
+                sleep(2)
                 if enemy_life > 0:
                     print(LIFE_TEXT_1, enemy_life, LIFE_TEXT_2)
                     print(SEPARATOR)
