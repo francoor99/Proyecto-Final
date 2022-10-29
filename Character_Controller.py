@@ -57,15 +57,15 @@ def select_character():
     nro = 1
     for i in values:
         if i.get_hp() == 0:
-            print(nro, ' - ', i.get_name(), '†')
+            print(nro, LINE, i.get_name(), DEAD_ICON)
             nro += 1
         else:
-            print(nro, ' - ', i.get_name())
+            print(nro, LINE, i.get_name())
             nro += 1
     character_option = int(input(CHARACTER_OPTION_TEXT))
     if character_option == 120731:
-        print("Yo soy Iron Man")
-        return Character("Iron Man", 53, 100, 100, 100, "Mejor superheroe de la historia")
+        print(IM_IRON_MAN)
+        return Character("Iron Man", 53, 100, 100, 100, BEST_SUPER_HERO)
     chosen_character = dictionary_characters[character_option]
     while 0 << character_option << 4 :
         print(INCORRECT_OPTION)
@@ -83,30 +83,30 @@ def upgrade_level():
             if stat == 1:
                 strength = dictionary_characters[i].get_strength() + 1
                 dictionary_characters[i].set_strength(strength)
-                print(f'El personaje {dictionary_characters[i].get_name()} aumento 1 de fuerza')
+                print(f' {CHARACTER_TEXT} {dictionary_characters[i].get_name()} {LEVEL_UP_F_TEXT}')
             elif stat == 2:
                 agi = dictionary_characters[i].get_agi() + 1
                 dictionary_characters[i].set_agi(agi)
-                print(f'El personaje {dictionary_characters[i].get_name()} aumento 1 de agilidad')
+                print(f' {CHARACTER_TEXT} {dictionary_characters[i].get_name()} {LEVEL_UP_A_TEXT}')
             elif stat == 3:
                 hp = dictionary_characters[i].get_hp() + 1
                 dictionary_characters[i].set_hp(hp)
-                print(f'El personaje {dictionary_characters[i].get_name()} aumento 1 de hp')
+                print(f' {CHARACTER_TEXT} {dictionary_characters[i].get_name()} {LEVEL_UP_HP_TEXT}')
 
 def add_item(character):
     i = randint(0, 15)
     if 0 <= i <= 10:
         item = items_list[i]
-        print(f'El enemigo droppeo {item.get_name()}')
+        print(f'{ENEMY_DROP_TEXT} {item.get_name()}')
         strength = character.get_strength() + item.get_strength()
         character.set_strength(strength)
-        print(f'El personaje {character.get_name()} aumento {item.get_strength()} de fuerza')
+        print(f' {CHARACTER_TEXT} {character.get_name()} {RAISED_TEXT} {item.get_strength()} {FORCE_TEXT}')
         agi = character.get_agi() + item.get_agi()
         character.set_agi(agi)
-        print(f'El personaje {character.get_name()} aumento {item.get_agi()} de agilidad')
+        print(f' {CHARACTER_TEXT} {character.get_name()} {RAISED_TEXT} {item.get_agi()} {AGILITY_TEXT_2}')
         hp = character.get_hp() + item.get_hp()
         character.set_hp(hp)
-        print(f'El personaje {character.get_name()} aumento {item.get_hp()} de hp')
+        print(f' {CHARACTER_TEXT} {character.get_name()} {RAISED_TEXT} {item.get_hp()} {HP_TEXT}')
         time.sleep(2)
 
 

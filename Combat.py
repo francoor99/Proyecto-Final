@@ -7,30 +7,30 @@ def attack(attack_points):
     dice1 = randint(1, 6)  # Dado 1
     dice2 = randint(1, 6)  # Dado 2
     lucky = dice1 + dice2
-    print("Suma de los dados:", lucky)
+    print(DICE_ADD_TEXT, lucky)
     if lucky < 4:
-        print('Ataque nulo')
+        print(NULL_ATTACK_TEXT)
         attack = 0
     elif lucky > 3 and lucky < 7:
-        print('Ataque x1')
+        print(ATTACK_X1)
         attack = attack_points
     elif lucky > 6 and lucky < 9:
-        print('Ataque x1.5')
+        print(ATTACK_X1_5)
         attack = attack_points * 1.5
     elif lucky == 9 and lucky == 10:
-        print('Ataque x2')
+        print(ATTACK_X2)
         attack = attack_points * 2
     elif lucky == 11:
-        print('Ataque x2.5')
+        print(ATTACK_X2_5)
         attack = attack_points * 2.5
     elif lucky == 12:
-        print('Ataque x3')
+        print(ATTACK_X3)
         attack = attack_points * 3
     return attack
 
 
 def reception(attack, agility):
-    print("Ataque:", attack, "Agilidad: ", agility)
+    print(ATTACK_TEXT, attack, AGILITY_TEXT, agility)
     if agility == 1:
         return attack
     elif agility == 2:
@@ -87,21 +87,21 @@ def combat():
         combating = True
         while combating == True:
             if character_life > 0:
-                print('<------------------------------------------------>')
-                print('Ambos estan vivos')
+                print(SEPARATOR)
+                print(LIVING_TEXT)
                 damage = reception(attack(character_attack), enemy_agility)
-                print('El ataque causa ', damage, ' puntos de daño.')
+                print(DAMAGE_TEXT_1, damage, DAMAGE_TEXT_2)
                 enemy_life = enemy_life - damage
                 if enemy_life > 0:
-                    print('El enemigo quedó con ', enemy_life, ' puntos de vida')
-                    print('<------------------------------------------------>')
+                    print(LIFE_TEXT_1, enemy_life, LIFE_TEXT_2)
+                    print(SEPARATOR)
                     sleep(4)
-                    print('El enemigo ataca!!')
+                    print(ENEMY_ATTACK_TEXT)
                     damage = reception(attack(enemy_attack), character_agility)
-                    print('El ataque causa ', damage, ' puntos de daño.')
+                    print(DAMAGE_TEXT_1, damage, DAMAGE_TEXT_2)
                     character_life = character_life - damage
                     sleep(4)
-                    print('<------------------------------------------------>')
+                    print(SEPARATOR)
                 else:
                     print(COMBAT_WIN_TEXT)
                     sleep(3)
