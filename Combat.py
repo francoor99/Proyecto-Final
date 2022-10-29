@@ -68,20 +68,21 @@ def combat():
             break
         character = select_character()
         while character.get_hp() == 0:
-            print("El personaje elegido esta muerto, elija otro ")
+            print(CHOSEN_DEAD_CHARACTER)
+            sleep(1)
             character = select_character()
         enemy = dictionary_enemy[enemy_counter]
-        print('Su personaje es: ', character.get_name())
-        print('Va a pelear contra: ', enemy.get_name())
+        print(CHOSEN_CHARACTER, character.get_name())
+        print(FIGHT_AGAINST, enemy.get_name())
         character_attack = character.get_strength()
         enemy_attack = enemy.get_strength()
-        print('La fuerza de tu personaje es: ', character_attack)
+        print(YOUR_CHARACTERS_STRENGTH, character_attack)
         character_life = character.get_hp()
         enemy_life = enemy.get_hp()
-        print('La vida de tu personaje es: ', character_life)
+        print(YOUR_CHARACTERS_HP, character_life)
         character_agility = character.get_agi()
         enemy_agility = enemy.get_agi()
-        print('La agilidad de tu personaje es: ', character_agility)
+        print(YOUR_CHARACTERS_AGI, character_agility)
         sleep(5)
         combating = True
         while combating == True:
@@ -94,11 +95,12 @@ def combat():
                 if enemy_life > 0:
                     print('El enemigo quedó con ', enemy_life, ' puntos de vida')
                     print('<------------------------------------------------>')
-                    sleep(5)
+                    sleep(4)
                     print('El enemigo ataca!!')
                     damage = reception(attack(enemy_attack), character_agility)
                     print('El ataque causa ', damage, ' puntos de daño.')
                     character_life = character_life - damage
+                    sleep(4)
                     print('<------------------------------------------------>')
                 else:
                     print(COMBAT_WIN_TEXT)

@@ -19,27 +19,27 @@ def create_character():
     validation = False
     while validation is False:
         print(MAX_STATS_TEXT)
-        strength = int(input('Ingrese la furza del personaje (mínimo 1): '))
-        agi = int(input('Ingrese la agilidad del personaje (mínimo 1): '))
-        hp = int(input('Ingrese la vida: '))
+        strength = int(input(STRENGTH_INPUT))
+        agi = int(input(AGILITY_INPUT))
+        hp = int(input(HP_INPUT))
         if strength + agi + hp == 15 and strength >= 1 and agi >= 1 and hp >= 1:
             validation = True
         else:
             print(FAIL_TEXT)
     validation = False
     while validation == False:
-        """constant_raza()"""
         print(RAZA_TEXT)
-        option = int(input('Ingrese el número: '))
-        if option == 1:
+        option = int(input(TYPE_INPUT))
+        option.lower()
+        if option == "humano":
             type = 'human'
             strength += 2
             validation = True
-        elif option == 2:
+        elif option == "elfo":
             type = 'elf'
             agi += 2
             validation = True
-        elif option == 3:
+        elif option == "enano":
             type = 'dwarf'
             hp += 2
             validation = True
@@ -56,15 +56,19 @@ def select_character():
     values = dictionary_characters.values()
     nro = 1
     for i in values:
-        print(nro, ' - ', i.get_name())
-        nro += 1
+        if i.get_hp() == 0:
+            print(nro, ' - ', i.get_name(), '†')
+            nro += 1
+        else:
+            print(nro, ' - ', i.get_name())
+            nro += 1
     character_option = int(input(CHARACTER_OPTION_TEXT))
     if character_option == 120731:
         print("Yo soy Iron Man")
         return Character("Iron Man", 53, 100, 100, 100, "Mejor superheroe de la historia")
     chosen_character = dictionary_characters[character_option]
     while 0 << character_option << 4 :
-        print("Eligio una opcion no valida, ingrese un personaje:")
+        print(INCORRECT_OPTION)
         character_option = int(input(CHARACTER_OPTION_TEXT))
         chosen_character = dictionary_characters[character_option]
     return chosen_character
