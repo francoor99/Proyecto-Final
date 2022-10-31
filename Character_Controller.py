@@ -29,7 +29,7 @@ def create_character():
     validation = False
     while validation == False:
         print(RAZA_TEXT)
-        option = int(input(TYPE_INPUT))
+        option = str(input(TYPE_INPUT))
         option.lower()
         if option == "humano":
             type = 'human'
